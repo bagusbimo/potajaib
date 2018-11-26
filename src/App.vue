@@ -22,7 +22,7 @@
           value="true"
           v-for="(item, i) in items"
           :key="i"
-          @click=""
+          @click="navigate(item.link)"
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -42,12 +42,9 @@
       <v-spacer></v-spacer>
     </v-toolbar>
     <v-content>
-      <br>
-      <br>
-        <v-layout align-center justify-center>
+        <!--v-layout align-center justify-center>
           <img src="./assets/pot.png" aspect-ratio="1" contain>
-        </v-layout>
-        <br>
+        </v-layout-->
       <router-view/>
     </v-content>
     <v-footer
@@ -80,11 +77,13 @@ export default {
       items: [
       {
         icon: 'home',
-        title: 'Home'
+        title: 'Home',
+        link: 'Magipot'
       },
       {
         icon: 'build',
-        title: 'Settings'
+        title: 'Settings',
+        link: 'Setting'
       }
       ],
       miniVariant: false,
@@ -93,6 +92,11 @@ export default {
       title: 'MagiPot beta'
     }
   },
-  name: 'App'
+  name: 'App',
+  methods:{
+    navigate(route){
+      this.$router.push({name: route})
+    }
+  }
 }
 </script>
