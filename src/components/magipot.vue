@@ -3,7 +3,14 @@
         <v-container
           fluid
           grid-list-lg
+
         >
+          <v-flex>
+            <v-layout justify-center>
+              <img src="../assets/pot.png" height="300">
+            </v-layout>
+          </v-flex>
+
           <v-layout row wrap>
             <v-flex xs12>
               <v-card color="primary" class="white--text">
@@ -35,138 +42,12 @@
               <v-card color="white" class="pink--text">
                 <v-card-title primary-title>
                   <div>
-                    <div class="headline">ATUR JADWAL PENYIRAMAN 1</div>
-                    <br>
-                    <br>
-                    <v-text-field
-                      v-model="jam1"
-                      type="number"
-                      label="Hour"
-                      placeholder="Jam"
-                      solo
-                    ></v-text-field>
-                    <v-text-field
-                      v-model="menit1"
-                      type="number"
-                      label="Minute"
-                      placeholder="Menit"
-                      solo
-                    ></v-text-field>
+                    <div class="headline">STATUS TANAMAN</div>
+                    <span>Kelembapan : {{ pot[0].humidity }} ( max : 1024 )</span>
                   </div>
                 </v-card-title>
-                <v-card-actions>
-                  <v-btn flat color="pink" @click="pump1(pot)">Atur Jadwal</v-btn>
-                </v-card-actions>
               </v-card>
             </v-flex>
-
-            <v-flex xs12>
-              <v-card color="white" class="pink--text">
-                <v-card-title primary-title>
-                  <div>
-                    <div class="headline">ATUR JADWAL PENYIRAMAN 2</div>
-                    <br>
-                    <br>
-                    <v-text-field
-                      v-model="jam2"
-                      type="number"
-                      label="Hour"
-                      placeholder="Jam"
-                      solo
-                    ></v-text-field>
-                    <v-text-field
-                      v-model="menit2"
-                      type="number"
-                      label="Minute"
-                      placeholder="Menit"
-                      solo
-                    ></v-text-field>
-                  </div>
-                </v-card-title>
-                <v-card-actions>
-                  <v-btn flat color="pink" @click="pump2(pot)">Atur Jadwal</v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-flex>
-
-            <v-flex xs12>
-              <v-card color="white" class="pink--text">
-                <v-card-title primary-title>
-                  <div>
-                    <div class="headline">ATUR JADWAL NYALA LAMPU UV</div>
-                    <br>
-                    <br>
-                    <v-text-field
-                      v-model="jam3"
-                      type="number"
-                      label="Hour"
-                      placeholder="Jam"
-                      solo
-                    ></v-text-field>
-                    <v-text-field
-                      v-model="menit3"
-                      type="number"
-                      label="Minute"
-                      placeholder="Menit"
-                      solo
-                    ></v-text-field>
-                  </div>
-                </v-card-title>
-                <v-card-actions>
-                  <v-btn flat color="pink" @click="uvOn(pot)">Atur Jadwal</v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-flex>
-
-            <v-flex xs12>
-              <v-card color="white" class="pink--text">
-                <v-card-title primary-title>
-                  <div>
-                    <div class="headline">ATUR JADWAL MATI LAMPU UV</div>
-                    <br>
-                    <br>
-                    <v-text-field
-                      v-model="jam4"
-                      type="number"
-                      label="Hour"
-                      placeholder="Jam"
-                      solo
-                    ></v-text-field>
-                    <v-text-field
-                      v-model="menit4"
-                      type="number"
-                      label="Minute"
-                      placeholder="Menit"
-                      solo
-                    ></v-text-field>
-                  </div>
-                </v-card-title>
-                <v-card-actions>
-                  <v-btn flat color="pink" @click="uvOff(pot)">Atur Jadwal</v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-flex>
-
-            <v-flex xs12>
-              <v-card color="white" class="pink--text">
-                <v-card-title primary-title>
-                  <div>
-                    <div class="headline">ATUR LAMPU RGB</div>
-                    <br>
-                    <br>
-                    <v-select
-                    :items="items"
-                    label="Pilih Preset Warna"
-                    solo
-                    ></v-select>
-                  </div>
-                </v-card-title>
-                <v-card-actions>
-                  <v-btn flat color="pink">Atur Jadwal</v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-flex>
-
           </v-layout>
         </v-container>
 </v-card>
