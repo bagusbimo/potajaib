@@ -55,7 +55,7 @@
                     </div>
                     <v-layout row mx-1></v-layout>
                     <v-text-field
-                        v-model="jam1"
+                        v-model="jam2"
                         type="number"
                         label="Hour"
                         :placeholder = "pot[0].Pump2.hour"
@@ -63,7 +63,7 @@
                     ></v-text-field>
                     <v-layout row mx-1></v-layout>
                     <v-text-field
-                        v-model="menit1"
+                        v-model="menit2"
                         type="number"
                         label="Minute"
                         :placeholder = "pot[0].Pump2.min"
