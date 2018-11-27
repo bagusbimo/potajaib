@@ -32,22 +32,12 @@
                 <v-card-title primary-title>
                   <div>
                     <div class="headline">STATUS TANAMAN</div>
-                    <span>Kelembapan : {{ pot[0].humidity }} ( max : 1024 )</span>
+                    <span>Kelembapan : {{ Math.round(Math.abs(pot[0].humidity - 1024) / 1024 * 100) }} %</span>
                   </div>
                 </v-card-title>
               </v-card>
             </v-flex>
 
-            <v-flex xs12>
-              <v-card color="white" class="pink--text">
-                <v-card-title primary-title>
-                  <div>
-                    <div class="headline">STATUS TANAMAN</div>
-                    <span>Kelembapan : {{ pot[0].humidity }} ( max : 1024 )</span>
-                  </div>
-                </v-card-title>
-              </v-card>
-            </v-flex>
           </v-layout>
         </v-container>
 </v-card>
