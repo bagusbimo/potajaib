@@ -3,41 +3,45 @@
         <v-container
           fluid
           grid-list-lg
+          
         >
           <v-layout row wrap>
             <v-flex xs12>
               <v-card color="white" class="pink--text">
                 <v-card-title primary-title>
-                  <div>
-                    <div class="headline">ATUR JADWAL PENYIRAMAN 1</div>
-                    <br>
-                    <br>
-                    <v-layout row pl-5 pr-5>
-                    <v-text-field
-                      v-model="jam1"
-                      type="number"
-                      label="Hour"
-                      :placeholder = "pot[0].Pump1.hour"
-                      solo
-                      style="text-justify:center"
-                    ></v-text-field>
-                    <v-layout row ma-2>
-
-                    </v-layout>
-                    <v-text-field
-                      v-model="menit1"
-                      type="number"
-                      label="Minute"
-                      :placeholder = "pot[0].Pump1.min"
-                      solo
-                    ></v-text-field>
+                    <v-layout justify-center>
+                        <div class="headline">JADWAL PENYIRAMAN 1</div>
                     </v-layout>
                     
-                  </div>
-                </v-card-title>
-                <v-card-actions>
-                  <v-btn flat color="pink" @click="pump1(pot)">Atur Jadwal</v-btn>
-                </v-card-actions>
+                </v-card-title>   
+                <v-layout row mx-3>
+                    <div>
+                        <v-icon color="primary" size="48" center>alarm</v-icon>
+                    </div>
+                    <v-layout row mx-1></v-layout>
+                    <v-text-field
+                        v-model="jam1"
+                        type="number"
+                        label="Hour"
+                        :placeholder = "pot[0].Pump1.hour"
+                        solo
+                    ></v-text-field>
+                    <v-layout row mx-1></v-layout>
+                    <v-text-field
+                        v-model="menit1"
+                        type="number"
+                        label="Minute"
+                        :placeholder = "pot[0].Pump1.min"
+                        solo
+                    ></v-text-field>
+                </v-layout>  
+                <v-layout justify-center>
+
+                        <v-btn color="primary" dark @click="pump1(pot)">simpan
+                            <v-icon dark right>check_circle</v-icon>
+                        </v-btn>
+
+                </v-layout>
               </v-card>
             </v-flex>
 
